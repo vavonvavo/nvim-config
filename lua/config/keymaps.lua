@@ -26,13 +26,6 @@ vim.keymap.set(
 
 vim.keymap.set('n', '<leader>fh', ':Telescope file_browser hidden=true<CR>', { noremap = true, silent = true, desc = 'Open file browser (show hidden files)' })
 
-vim.keymap.set('n', '<leader>fb', ':Telescope buffers<CR>', { noremap = true, silent = true })
-
--- LSP references via Telescope
-vim.keymap.set('n', '<leader>cR', function()
-  require('telescope.builtin').lsp_references()
-end, { desc = 'Telescope: LSP References', noremap = true, silent = true })
-
 -- Diagnostics
 vim.keymap.set('n', '<leader>cd', vim.diagnostic.open_float, { desc = 'Show Diagnostic (float)', noremap = true, silent = true })
 

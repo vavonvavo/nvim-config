@@ -1,14 +1,12 @@
 return {
   {
     'nvim-treesitter/nvim-treesitter',
-    version = false,
     build = ':TSUpdate',
     event = { 'BufReadPost', 'BufNewFile', 'BufWritePre', 'VeryLazy' },
     main = 'nvim-treesitter.configs',
     dependencies = {
       {
         'nvim-treesitter/nvim-treesitter-textobjects',
-        event = 'VeryLazy',
       },
     },
     opts = {
